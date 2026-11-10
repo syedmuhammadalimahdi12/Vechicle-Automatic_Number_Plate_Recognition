@@ -1,0 +1,20 @@
+models:
+  vehicle: models/yolo11n.pt
+  license_plate: models/license_plate.pt
+ocr:
+  engine: easyocr
+  languages: [en]
+detection:
+  vehicle_confidence: 0.40
+  plate_confidence: 0.40
+processing:
+  frame_skip: 2
+  duplicate_interval: 10
+  evidence_enabled: true
+database:
+  url: sqlite:///data/anpr.db
+logging:
+  path: logs/anpr.log
+ui:
+  theme: dark
+  region: flexible
